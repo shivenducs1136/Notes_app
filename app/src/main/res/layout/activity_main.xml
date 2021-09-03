@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_edit_txt"
+            android:layout_marginTop="20dp"
+            android:hint="Enter your note here"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="submitbtnclicked"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="40dp"
+            android:layout_below="@+id/main_edit_txt"
+            android:text="Done"
+            android:id="@+id/main_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/main_btn"
+            android:id="@+id/recview"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+</layout>
